@@ -1,0 +1,115 @@
+body {
+    background-color: #dddddd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    background-color: #372c2e;
+    justify-content: center;
+    box-shadow: 0.5px 0.5px 10px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    list-style: none;
+}
+
+.h-animated {
+    animation-name: dropFromTop;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+a {
+    color: aliceblue;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: lightcoral;
+    padding: .5rem;
+}
+
+li a {
+    background-color: transparent;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: lightslategray;
+    transform: translateY(100px);
+}
+
+a:active {
+    background-color: lightcoral;
+}
+
+article {
+    padding: 0.5rem;
+    padding-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #de9e48;
+    background-color: #fdfdbb;
+}
+
+#promo-content {
+    align-self: center;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+/* for larger screens   */
+
+@media (min-width:40em) {
+    main {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    main {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #promo-article {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        grid-column: span 3;
+        background-color: #9a9ffc;
+    }
+}
+
+img.card,
+img.footer-img {
+    display: block;
+    border-radius: 2px;
+    width: 100%;
+}
+
+footer {
+    display: grid;
+    gap: 10rem;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    margin: 1.5rem 0px 0px 0px;
+    padding: 1rem;
+    box-shadow: 0.5px 0.5px 10px;
+    color: #dddddd;
+    background-color: #372c2e;
+}
+
+@keyframes dropFromTop {
+    from {
+        transform: translateY(-30px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
